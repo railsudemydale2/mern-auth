@@ -1,4 +1,4 @@
-/* eslint-disable no-unused-vars */
+
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "firebase/app";
 // TODO: Add SDKs for Firebase products that you want to use
@@ -6,7 +6,7 @@ import { initializeApp } from "firebase/app";
 
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCqFuBrMYk2UAvH8P9qtQzRom52FIzT0eo",
+  apiKey: import.meta.env.VITE_FIREBASE_API_KEY,
   authDomain: "mern-auth-4b709.firebaseapp.com",
   projectId: "mern-auth-4b709",
   storageBucket: "mern-auth-4b709.appspot.com",
@@ -15,4 +15,6 @@ const firebaseConfig = {
 };
 
 // Initialize Firebase
-const app = initializeApp(firebaseConfig);
+export const app = initializeApp(firebaseConfig);
+
+
